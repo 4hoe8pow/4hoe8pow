@@ -15,18 +15,28 @@
 mindmap
   root((4hoe8pow))
     Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
+      Sports
+        Table Tennis
+        Ice Hockey
+        Kabaddi
+      Hometown
+        Miyazaki/Nichinan  
     Tools
-      Pen and paper
-      Mermaid
+      3DCG
+        Blender
+        Houdini
+      Languages
+        C
+        Rust
+        TypeScript
+      Frameworks
+        Remix
+      Environments
+        Cloudflare
+    Production
+      Research
+        Sports Tech
+      Development
+        Game for PC
+        Web App
 ```
