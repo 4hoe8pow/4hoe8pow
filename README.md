@@ -36,7 +36,8 @@ mindmap
     Production
       Research
         Sports Tech
-      Development
+      Deliverables
         Game for PC
         Web App
+        Movie
 ```
