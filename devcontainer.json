@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "Grin",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "mounts": ["target=/workspace/node_modules"],
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [5173],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": ".devcontainer/getting_ready.sh",
+
+  "postAttachCommand": "exec fish",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        //フォーマッタ
+        "esbenp.prettier-vscode",
+        //rust
+        "rust-lang.rust-analyzer",
+        "serayuzgur.crates",
+        "tamasfe.even-better-toml",
+        //リンタ
+        "dbaeumer.vscode-eslint",
+        //全角スペースの検知
+        "saikou9901.evilinspector",
+        //git
+        "mhutchie.git-graph",
+        //github actions
+        "github.vscode-github-actions",
+        //csv
+        "mechatroner.rainbow-csv",
+        //正規表現
+        "lextudio.restructuredtext",
+        //svelte
+        "svelte.svelte-vscode",
+        //unit test
+        "vitest.explorer",
+        //icons
+        "vscode-icons-team.vscode-icons",
+        //css
+        "chakra-ui.panda-css-vscode"
+      ],
+      "settings": {
+        "workbench.iconTheme": "vscode-icons",
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+
+  // Uncomment to connect as root instead
+  "remoteUser": "hoe"
+}
