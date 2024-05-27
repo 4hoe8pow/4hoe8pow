@@ -9,7 +9,7 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 # shell theme
 fish -c "fisher install oh-my-fish/theme-bobthefish"
 # z(alt cd)
-fish -c "install jethrokuan/z"
+fish -c "fisher install jethrokuan/z"
 
 # Set up aliases and configurations in Fish shell
 echo "# Shell Operations" >> ~/.config/fish/config.fish
@@ -42,5 +42,9 @@ sudo chsh -s $(which fish)
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
-..
+cd ..
 rm -rf ./fonts
+
+sudo chown hoe node_modules
+
+exec fish

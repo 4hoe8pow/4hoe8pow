@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:16-bullseye
+FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:bookworm
 # Environment variables
 ENV USER hoe
 ENV HOME /home/$USER
