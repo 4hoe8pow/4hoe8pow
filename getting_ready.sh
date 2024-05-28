@@ -2,7 +2,7 @@
 
 # Install necessary packages
 sudo apt update
-sudo apt -y install fish exa ripgrep fzf
+sudo apt -y install fish exa ripgrep fzf git
 
 # Install fisher
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
@@ -10,7 +10,8 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 fish -c "fisher install oh-my-fish/theme-bobthefish"
 # z(alt cd)
 fish -c "fisher install jethrokuan/z"
-
+# Install starship
+curl -sS https://starship.rs/install.sh | sh
 # Set up aliases and configurations in Fish shell
 echo "# Shell Operations" >> ~/.config/fish/config.fish
 echo "alias l='exa --color auto --icons'" >> ~/.config/fish/config.fish
@@ -20,9 +21,10 @@ echo "alias tree='exa -T -L 3 --color auto --icons'" >> ~/.config/fish/config.fi
 echo "alias grep='rg'" >> ~/.config/fish/config.fish
 echo "alias g='git'" >> ~/.config/fish/config.fish
 echo "set -g theme_color_scheme dracula" >> ~/.config/fish/config.fish
+echo "starship init fish | source" >> ~/.config/fish/config.fish
 
 # Set up git aliases globally
-git config --global alias.a add 
+git config --global alias.a add
 git config --global alias.c commit
 git config --global alias.p push
 git config --global alias.st status
@@ -38,13 +40,4 @@ fish -c "funcsave fish_config"
 # Change default shell to Fish
 sudo chsh -s $(which fish)
 
-# font
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-cd ..
-rm -rf ./fonts
-
 sudo chown hoe node_modules
-
-exec fish
