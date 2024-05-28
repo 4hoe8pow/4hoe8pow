@@ -62,7 +62,10 @@
 				"editor.defaultFormatter": "esbenp.prettier-vscode",
 				"[javascript]": {
 					"editor.defaultFormatter": "esbenp.prettier-vscode"
-				}
+				},
+				"workbench.colorTheme": "Tokyo Night Storm",
+  			"terminal.integrated.fontFamily": "'BigBlueTerm437 Nerd Font'",
+  			"editor.fontSize": 12
 			}
 		}
 	},
